@@ -165,6 +165,7 @@ class SecondVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
         return pinView
     }
+    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if selectedTitle != "" {
             let requestLocation = CLLocation(latitude: annotationLatitude, longitude: annotationLongitude)

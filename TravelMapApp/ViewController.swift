@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         getData()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(getData), name: NSNotification.Name("newPlace"), object: nil)
     }
@@ -58,6 +59,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         chosenTitle = ""
         performSegue(withIdentifier: "toSecondVC", sender: nil)
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titleArray.count
     }
@@ -73,6 +75,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         chosenTitleId = idArray[indexPath.row]
         performSegue(withIdentifier: "toSecondVC", sender: nil)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSecondVC"{
             let destinationVC = segue.destination as! SecondVC
