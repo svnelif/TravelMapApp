@@ -11,9 +11,10 @@
 		679FA2392C4E938C00134414 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679FA2382C4E938C00134414 /* SceneDelegate.swift */; };
 		679FA23B2C4E938C00134414 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679FA23A2C4E938C00134414 /* ViewController.swift */; };
 		679FA23E2C4E938C00134414 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 679FA23D2C4E938C00134414 /* Base */; };
-		679FA2412C4E938C00134414 /* TravelMapApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 679FA23F2C4E938C00134414 /* TravelMapApp.xcdatamodeld */; };
 		679FA2432C4E938F00134414 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 679FA2422C4E938F00134414 /* Assets.xcassets */; };
 		679FA2462C4E938F00134414 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 679FA2452C4E938F00134414 /* Base */; };
+		679FA24E2C4E957A00134414 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679FA24D2C4E957A00134414 /* SecondVC.swift */; };
+		679FA2542C4E9F5100134414 /* TravelMapApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 679FA2522C4E9F5100134414 /* TravelMapApp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +23,11 @@
 		679FA2382C4E938C00134414 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		679FA23A2C4E938C00134414 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		679FA23D2C4E938C00134414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		679FA2402C4E938C00134414 /* TravelMapApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelMapApp.xcdatamodel; sourceTree = "<group>"; };
 		679FA2422C4E938F00134414 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		679FA2452C4E938F00134414 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		679FA2472C4E938F00134414 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		679FA24D2C4E957A00134414 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
+		679FA2532C4E9F5100134414 /* TravelMapApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelMapApp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +63,12 @@
 				679FA2362C4E938C00134414 /* AppDelegate.swift */,
 				679FA2382C4E938C00134414 /* SceneDelegate.swift */,
 				679FA23A2C4E938C00134414 /* ViewController.swift */,
+				679FA24D2C4E957A00134414 /* SecondVC.swift */,
 				679FA23C2C4E938C00134414 /* Main.storyboard */,
 				679FA2422C4E938F00134414 /* Assets.xcassets */,
 				679FA2442C4E938F00134414 /* LaunchScreen.storyboard */,
+				679FA2522C4E9F5100134414 /* TravelMapApp.xcdatamodeld */,
 				679FA2472C4E938F00134414 /* Info.plist */,
-				679FA23F2C4E938C00134414 /* TravelMapApp.xcdatamodeld */,
 			);
 			path = TravelMapApp;
 			sourceTree = "<group>";
@@ -142,8 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				679FA23B2C4E938C00134414 /* ViewController.swift in Sources */,
+				679FA2542C4E9F5100134414 /* TravelMapApp.xcdatamodeld in Sources */,
+				679FA24E2C4E957A00134414 /* SecondVC.swift in Sources */,
 				679FA2372C4E938C00134414 /* AppDelegate.swift in Sources */,
-				679FA2412C4E938C00134414 /* TravelMapApp.xcdatamodeld in Sources */,
 				679FA2392C4E938C00134414 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,13 +373,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		679FA23F2C4E938C00134414 /* TravelMapApp.xcdatamodeld */ = {
+		679FA2522C4E9F5100134414 /* TravelMapApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				679FA2402C4E938C00134414 /* TravelMapApp.xcdatamodel */,
+				679FA2532C4E9F5100134414 /* TravelMapApp.xcdatamodel */,
 			);
-			currentVersion = 679FA2402C4E938C00134414 /* TravelMapApp.xcdatamodel */;
-			path = TravelMapApp.xcdatamodeld;
+			currentVersion = 679FA2532C4E9F5100134414 /* TravelMapApp.xcdatamodel */;
+			name = TravelMapApp.xcdatamodeld;
+			path = "/Users/svnelif/Desktop/iOS Complate/TravelMapApp/TravelMapApp/TravelMapApp.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
