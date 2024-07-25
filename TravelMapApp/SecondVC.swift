@@ -8,6 +8,7 @@ class SecondVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var commentText: UITextField!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var saveButton: UIButton!
     
     var locationManager = CLLocationManager()
     var chosenLatitude  = Double()
@@ -23,6 +24,11 @@ class SecondVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if selectedTitle != "" {
+            saveButton.isHidden = true
+        }
+        
         
         mapView.delegate = self
         locationManager.delegate = self
@@ -90,8 +96,8 @@ class SecondVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     }
 
-    @IBAction func saveButton(_ sender: Any) {
-        //Veritabanına değerleri kaydetmek için
+    @IBAction func saveButtonClicked(_ sender: Any) {
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         

@@ -83,5 +83,43 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             destinationVC.selectedTitleId = chosenTitleId
         }
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Places")
+            
+            let idString = idArray[indexPath.row].uuidString
+            fetchRequest.predicate = NSPredicate(format: "id = %@", idString)
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            do{
+                let result = try context.fetch(fetchRequest)
+                if result.count > 0 {
+                    for res in result as! [NSManagedObject]{
+                        if let id = res.value(forKey: "id") as? UUID {
+                            if id == idArray[indexPath.row]{
+                                context.delete(res)
+                                titleArray.remove(at: indexPath.row)
+                                idArray.remove(at: indexPath.row)
+                                self.tableView.reloadData()
+                                
+                                do{
+                                    try context.save()
+                                }catch{
+                                    print("Error!!")
+                                }
+                                break
+                            }
+                        }
+                    }
+                }
+            }catch{
+                print("Error!")
+            }
+        }
+    }
 }
 
